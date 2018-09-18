@@ -1,0 +1,304 @@
+html {
+    overflow-x:auto;
+    font-size: 20px;
+}
+/*@media screen and (max-width: 1400px) {*/
+  /*html {*/
+    /*font-size: 18px;*/
+  /*}*/
+/*}*/
+/*@media screen and (max-width: 1300px) {*/
+  /*html {*/
+    /*font-size: 16px;*/
+  /*}*/
+/*}*/
+/*@media screen and (max-width: 1100px) {*/
+  /*html {*/
+    /*font-size: 14px;*/
+  /*}*/
+/*}*/
+/*@media screen and (max-height:800px) {*/
+  /*html {*/
+    /*font-size: 14px;*/
+  /*}*/
+/*}*/
+body, dl, dt, dd, ul, ol, li, pre, form, fieldset, input, p, blockquote, th, td {
+    font-weight:400;
+    margin:0;
+    padding:0;
+}
+input,select,button,textarea{
+    outline: none;
+    font-family: "Microsoft YaHei", 微软雅黑, Helvetica, Arial, sans-serif;
+    resize: none;
+}
+input:focus,select,button { outline: none; }
+h1, h2, h3, h4, h4, h5 {
+    margin:0;
+    padding:0;
+    font-weight:400;
+    font-size: .9rem;
+    color:#000;
+}
+/*Chrome Firefox Opera Safari*/
+  input:disabled{
+      border:1px solid #DDD;
+      background-color:#fff;
+      color:#999;
+      opacity: 1;
+  }
+/*----------用来移除向下箭头----------*/
+/*input[type="date"]::-webkit-calendar-picker-indicator {*/
+    /*display: none;*/
+/*}*/
+
+/*----------用来移除叉叉按钮----------*/
+input[type="date"]::-webkit-clear-button{
+    display:none;
+}
+input[type="time"]::-webkit-clear-button{
+    display:none;
+}
+
+button{padding:0;}
+body {
+    background-color:#FFFFFF;
+    color:#666666;
+    font-family:"Microsoft YaHei",微软雅黑,Helvetica,Arial,sans-serif;
+    font-size:0.6rem;
+    text-align:left;
+}
+select {
+    font-size:0.6rem;
+}
+table {
+    border-collapse:collapse;
+}
+fieldset, img {
+    border:0 none;
+}
+fieldset {
+    margin:0;
+    padding:0;
+}
+fieldset p {
+    margin:0;
+    padding:0;
+}
+legend {
+    display:none;
+}
+address, caption, em, strong, th, i {
+    font-style:normal;
+    font-weight:400;
+}
+table caption {
+    margin-left:-1px;
+}
+hr {
+    border-bottom:1px solid #FFFFFF;
+    border-top:1px solid #E4E4E4;
+    border-width:1px 0;
+    clear:both;
+    height:2px;
+    margin:5px 0;
+    overflow:hidden;
+}
+ol, ul {
+    list-style-image:none;
+    list-style-position:outside;
+    list-style-type:none;
+}
+caption, th {
+    text-align:left;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+    content:"";
+}
+*{box-sizing: border-box}
+.lf{float:left}
+.rf{float:right}
+div:after{
+    content:'';
+    display:block;
+    clear:both;
+}
+div:before{
+    content:'';
+    display:table;
+}
+img{vertical-align: middle}
+a:link {
+    text-decoration: none;
+    color:#666;
+}
+a:visited {
+    text-decoration: none;
+    color:#666;
+}
+a:hover{
+    text-decoration: none;
+    color:#666;
+}
+select {
+    /*Chrome和Firefox里面的边框不一样*/
+    /*border: solid 1px #000;*/
+
+    /*很关键：将默认的select选择框样式清除*/
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+
+    /*在选择框的最右侧中间显示小箭头图片*/
+    background: url("./images/select.png") no-repeat scroll 95% center transparent;
+    /*background-size:contain;*/
+
+
+    /*为下拉小箭头留出一点位置，避免被文字覆盖*/
+    padding-right: 1rem;
+    padding-left: .5rem;
+}
+
+
+/*清除ie的默认选择框样式清除，隐藏下拉箭头*/
+select::-ms-expand { display: none; }
+
+select,input{
+    color:#fff;
+    border:1px solid #17388F;
+}
+select option{
+    background: #040c3b;
+}
+input{
+    background: transparent;
+    border:1px solid #17388F;
+    padding-left:.5rem;
+}
+button {
+    cursor: pointer;
+}
+
+/***** 滑块begin *****/
+input[type=range] {
+    vertical-align: middle;
+    -webkit-appearance: none;
+    width: 100%;
+    border-radius: 4px; /*这个属性设置使填充进度条时的图形为圆角*/
+    /*background: -webkit-linear-gradient(#d8eaf2, #d8eaf2) no-repeat;*/
+    background: -webkit-linear-gradient(#5F8ADD, #4466dd) no-repeat;
+    /*background: -webkit-linear-gradient(#3c7de6, #3c7de6) no-repeat;*/
+    background-size: 50% 100%;
+    cursor:pointer;
+    padding-left: 0;
+}
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+    height: 8px;
+    border-radius: 4px; /*将轨道设为圆角的*/
+    /*box-shadow: 0 1px 1px #def3f8, inset 0 .125em .125em #0d1112; !*轨道内置阴影效果*!*/
+    border:1px solid rgba(199,199,199,.6);
+}
+input[type=range]:focus {
+    outline: none;
+}
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 16px;
+    width: 16px;
+    margin-top: -6px; /*使滑块超出轨道部分的偏移量相等*/
+    background: #90CDD2;
+    border-radius: 50%; /*外观设置为圆形*/
+    /*border: solid 0.125em rgba(205, 224, 230, 0.5); !*设置边框*!*/
+    border:1px solid rgba(199,199,199,.6);
+    background: -webkit-linear-gradient(#90CDD2, #90CDD2) no-repeat;
+    /*box-shadow: 0 .125em .125em #3b4547; !*添加底部阴影*!*/
+}
+/***** 滑块end *****/
+
+/***** checkbox radio start *****/
+input[type="radio"],
+input[type="checkbox"]{
+    -webkit-appearance: none;
+    vertical-align:-2px;
+    margin-top:0;
+    border:#487CE5 solid 2px;
+    border-radius: 3px;
+    height: .9rem;
+    width: .9rem;
+    margin-right: 5px;
+    background: transparent;
+}
+input[type="radio"]:checked,
+input[type="checkbox"]:checked {
+    /*background: #3190e8;*/
+}
+input[type="radio"]:checked::after,
+input[type=checkbox]:checked::after {
+    content: '';
+    background: transparent;
+    border: #fff solid 2px;
+    border-top: none;
+    border-right: none;
+    height: .2rem;
+    width: .4rem;
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    position: relative;
+    top:.22rem;
+    left:.15rem;
+    display: block;
+}
+/***** checkbox end *****/
+
+/*.loading{*/
+    /*position:fixed;*/
+    /*top:45%;*/
+    /*left:50%;*/
+    /*!*margin-left: 1.2rem;*!*/
+    /*width: 8rem;*/
+    /*text-align: center;*/
+    /*display: none;*/
+    /*!*background: #ccc;*!*/
+    /*border-radius: 5px;*/
+    /*padding: .5rem;*/
+/*}*/
+/*.loading img{*/
+    /*width:60%;*/
+/*}*/
+/*.loading p{*/
+    /*width:100%;*/
+    /*margin-top: .5rem;*/
+    /*text-align: center;*/
+    /*font-size: .6rem;*/
+    /*color:#555;*/
+/*}*/
+
+/***** 复写iview timePicker 样式 ******/
+.timePicker input{
+    background: #173673;
+    border: 1px solid #4c83f0;
+    height:2.6rem;
+    width:7.4rem;
+    font-size: 1rem;
+    color:#fff;
+    text-align: center;
+}
+.timePicker i{
+    font-size: 1rem;
+    color:#fff;
+    top:.45rem;
+}
+.timePicker li{
+    background: #173673;
+}
+.timePicker li:hover{
+    background: #fff;
+    color:#173673;
+}
+
+
