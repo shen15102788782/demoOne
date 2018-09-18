@@ -12,6 +12,7 @@
       <div class="title">
         <img src="./../assets/images/titleIcon.png" alt=""><span>基础信息</span>
       </div>
+      <p>测试</p>
       <div class="content">
         <div class="listItem">
                 <p>
